@@ -1,0 +1,128 @@
+# Listing of Parameters
+# ---------------------
+
+subsection Mesh Data
+
+  # Use an external mesh file (specified by mesh file)
+  set external mesh = true 
+
+  # Name of the output file (without extension)
+  set mesh file = ../mesh/torus_benchmark_coarse.ucd
+    
+  # Type of boundary (cube/cylinder_z)
+  set boundary shape = cube
+  
+  # Maximum value of x
+  set xmax = 0.25
+  
+  # Minimum value of x
+  set xmin = -0.25
+  
+  # Maximum value of y
+  set ymax = 0.25
+  
+  # Minimum value of y
+  set ymin = -0.25
+  
+  # Maximum value of z
+  set zmax = 0.25
+  
+  # Minimum value of z
+  set zmin = -0.25
+  
+  # Radius of mesh (if applicable)
+  set radius = 1.0
+  
+  # Height of mesh (if applicable)
+  set height = 1.0
+end
+
+
+subsection Output Parameters
+
+  # Name of the output file (without extension)
+  set Output filename = torus
+  
+  # Output file extension
+  set Output filetype = vtk
+  
+  # Number of subdivisions in VTK file
+  set n_subdivisions = 3
+
+end
+
+
+subsection Material Parameters
+
+  # Angular frequency
+  set omega = 133.5
+  
+  # Regularisation Parameter
+  set regularisation parameter = 1e-6
+
+  # Background permittivity
+  set background epsilon = 0.0
+
+  # Background (relative) permeability
+  set background mur = 1.0
+
+  # Background conductivity
+  set background sigma = 0.0
+
+  # Object permittivity
+  set object epsilon = 0.0
+
+  # Object (relative) permability
+  set object mur = 1.0
+
+  # Object conductivity
+  set object sigma = 5.96e7
+  
+  # Boundary condition flag. True = Neumann, False = Dirichlet
+  set neumann flag = true
+
+end
+
+subsection Polarization Tensor
+
+  # Enable/disable use of Polarization Tensor
+  set use polarization tensor = true
+  
+  # Take the complex conjugate of the tensor before use (SHOULDNT NEED TO CHANGE)
+  set complex conjugate = false
+
+  # Real part of Polarization Tensor
+  set polarization tensor real = -1.9175147881436428e-05, -3.5502340311114158e-12, -1.0264149683952323e-11; -3.4116935144677964e-12, -1.2653911503620120e-06, 3.7490445138540217e-12; -1.2658446120185741e-11, 3.7451972869727478e-12, -1.2653638604728195e-06; 
+  
+  # Imaginary part of Polarization Tensor
+  set polarization tensor imaginary = -3.6152447397477927e-05, -1.1977622002273268e-12, -1.1063530970211620e-11; -1.7735548842972288e-12, -7.1270842275895294e-06, -4.9306847492890048e-12; -9.1299286495820598e-12, -4.9362415017466529e-12, -7.1270930879379390e-06;
+  
+  # Real part of uniform background field
+  set uniform field real = 0.0, 0.0, 1.0
+  
+  # Imaginary part of uniform background field
+  set uniform field imaginary = 0.0, 0.0, 0.0
+  
+end
+
+subsection Preconditioner Data
+
+  # Enable the sparse direct solver (disables the GMRES solver)
+  set use direct = false
+  
+  # Iterative solver tolerance
+  set solver tolerance = 1e-7
+
+  # SparseILU diagonal strengthening
+  set diagonal strengthening = 0
+  
+  # SparseILU extra off diagonals
+  set extra off diagonals = 0
+  
+  # Left or right preconditioning
+  set right preconditioning = true
+  
+  # Flag to constrain gradients (to zero) in the non-conducting region
+  set constrain gradients = true
+
+end

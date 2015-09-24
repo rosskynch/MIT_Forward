@@ -1,0 +1,73 @@
+# output files:
+*.out
+*.deallog
+*.txt
+
+# mesh files and folder
+mesh/
+*.ucd
+
+# results folder
+results/
+
+# Mac OS specific:
+.DS_Store
+
+# misc wildcards:
+*.*~
+*.swp
+*.kate-swp
+
+# CMake and makefiles (leaves CMakeLists.txt)
+CMakeCache.txt
+CMakeFiles
+Makefile
+cmake_install.cmake
+install_manifest.txt
+!CMakeLists.txt
+
+# Build dir:
+build*/
+*build*/
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# General graphics extensions
+*.[jJ][pP][gG]
+*.[jJ][pP][eE][gG]
+*.[pP][nN][gG]
+*.[gG][iI][fF]
+*.fig
+
+# Graphics documents
+*.pdf
+*.eps
+*.ps
+
+# Visualisation output
+*.vtk
+*.gmv
+*.gpl

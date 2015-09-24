@@ -1,0 +1,131 @@
+# Listing of Parameters
+# ---------------------
+
+subsection Mesh Data
+
+  # Use an external mesh file (specified by mesh file)
+  set external mesh = false
+
+  # Name of the output file (without extension)
+  set mesh file = unspecified
+    
+  # Type of boundary (cube/cylinder_z)
+  set boundary shape = sphere
+  
+  # Maximum value of x
+  set xmax = 0.5
+  
+  # Minimum value of x
+  set xmin = -0.5
+  
+  # Maximum value of y
+  set ymax = 0.5
+  
+  # Minimum value of y
+  set ymin = -0.5
+  
+  # Maximum value of z
+  set zmax = 0.5
+  
+  # Minimum value of z
+  set zmin = -0.5
+  
+  # Radius of mesh (if applicable)
+  set radius = 0.5
+  
+  # Height of mesh (if applicable)
+  set height = 0.0
+  
+  # Radius of inner mesh (if applicable)
+  set inner radius = 0.01
+end
+
+
+subsection Output Parameters
+
+  # Name of the output file (without extension)
+  set Output filename = sphere
+  
+  # Output file extension
+  set Output filetype = vtk
+  
+  # Number of subdivisions in VTK file
+  set n_subdivisions = 1
+
+end
+
+
+subsection Material Parameters
+
+  # Angular frequency
+  set omega = 133.5
+  
+  # Regularisation Parameter
+  set regularisation parameter = 1e-5
+
+  # Background permittivity
+  set background epsilon = 0.0
+
+  # Background (relative) permeability
+  set background mur = 1.0
+
+  # Background conductivity
+  set background sigma = 0.0
+
+  # Object permittivity
+  set object epsilon = 0.0
+
+  # Object (relative) permability
+  set object mur = 1.0
+
+  # Object conductivity
+  set object sigma = 5.96e7
+  
+  # Boundary condition flag. True = Neumann, False = Dirichlet
+  set neumann flag = false
+
+end
+
+subsection Polarization Tensor
+
+  # Enable/disable use of Polarization Tensor
+  set use polarization tensor = false
+  
+  # Take the complex conjugate of the tensor before use (SHOULDNT NEED TO CHANGE)
+  set complex conjugate = false
+  
+  # Real part of Polarization Tensor
+  set polarization tensor real = -3.9481221385894277E-008,  -3.6073825883375943E-014,   2.5521713145337678E-016; -2.1239376251535817E-014,  -3.9481337721900366E-008,  -1.7238205062786227E-014; 2.1564317352302081E-015,  -1.8440379781953235E-014,  -3.9481361783338711E-008
+  
+  # Imaginary part of Polarization Tensor
+  set polarization tensor imaginary = -4.1486742168512305E-007,  -9.5700964381943998E-014,  -8.4728825888905368E-014; -1.0405363165985268E-013,  -4.1486793443200457E-007,  -2.8849056378548379E-013; -8.5020960832468168E-014,  -2.8774231587837078E-013,  -4.1486785551403593E-007;
+  
+  # Real part of uniform background field
+  set uniform field real = 0.0, 0.0, 1.0
+  
+  # Imaginary part of uniform background field
+  set uniform field imaginary = 0.0, 0.0, 0.0
+  
+end
+
+subsection Preconditioner Data
+
+  # Enable the sparse direct solver (disables the GMRES solver)
+  set use direct = false
+  
+  # Iterative solver tolerance
+  set solver tolerance = 1e-7
+
+  # SparseILU diagonal strengthening
+  set diagonal strengthening = 0
+  
+  # SparseILU extra off diagonals
+  set extra off diagonals = 0
+  
+  # Left or right preconditioning
+  set right preconditioning = true
+  
+  # Flag to constrain gradients (to zero) in the non-conducting region
+  set constrain gradients = true
+
+end

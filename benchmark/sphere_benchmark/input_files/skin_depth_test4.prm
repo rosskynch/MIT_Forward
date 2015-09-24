@@ -1,0 +1,106 @@
+# Listing of Parameters
+# ---------------------
+
+subsection Mesh Data
+
+  # Use an external mesh file (specified by mesh file)
+  set external mesh = true
+
+  # Name of the output file (without extension)
+  set mesh file = ../mesh/cubittest.ucd
+    
+  # Type of boundary (cube/cylinder_z)
+  set boundary shape = cube
+  
+  # Maximum value of x
+  set xmax = 1.0
+  
+  # Minimum value of x
+  set xmin = -1.0
+  
+  # Maximum value of y
+  set ymax = 1.0
+  
+  # Minimum value of y
+  set ymin = -1.0
+  
+  # Maximum value of z
+  set zmax = 1.0
+  
+  # Minimum value of z
+  set zmin = -1.0
+  
+  # Radius of mesh (if applicable)
+  set radius = 0.5
+  
+  # Height of mesh (if applicable)
+  set height = 1.0
+end
+
+
+subsection Output Parameters
+
+  # Name of the output file (without extension)
+  set Output filename = sphere_skindepth4
+  
+  # Output file extension
+  set Output filetype = vtk
+  
+  # Number of subdivisions in VTK file
+  set n_subdivisions = 3
+
+end
+
+
+subsection Material Parameters
+
+  # Angular frequency
+  set omega = 133.5
+  
+  # Regularisation Parameter
+  set regularisation parameter = 1e-6
+
+  # Background permittivity
+  set background epsilon = 0.0
+
+  # Background (relative) permeability
+  set background mur = 1.0
+
+  # Background conductivity
+  set background sigma = 0.0
+
+  # Object permittivity
+  set object epsilon = 0.0
+
+  # Object (relative) permability
+  set object mur = 1.0
+
+  # Object conductivity
+  set object sigma = 1e6
+  
+  # Boundary condition flag. True = Neumann, False = Dirichlet
+  set neumann flag = false
+
+end
+
+subsection Preconditioner Data
+
+  # Enable the sparse direct solver (disables the GMRES solver)
+  set use direct = false
+  
+  # Iterative solver tolerance
+  set solver tolerance = 1e-7
+
+  # SparseILU diagonal strengthening
+  set diagonal strengthening = 0
+  
+  # SparseILU extra off diagonals
+  set extra off diagonals = 0
+  
+  # Left or right preconditioning
+  set right preconditioning = false
+  
+  # Flag to constrain gradients (to zero) in the non-conducting region
+  set constrain gradients = true
+
+end

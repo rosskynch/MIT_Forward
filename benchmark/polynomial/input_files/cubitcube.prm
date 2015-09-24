@@ -1,0 +1,142 @@
+# Listing of Parameters
+# ---------------------
+
+subsection Mesh Data
+
+  # Use an external mesh file (specified by mesh file)
+  set external mesh = true 
+
+  # Name of the output file (without extension)
+  set mesh file = ../mesh/cube.ucd
+  
+  # Type of boundary (cube/cylinder_z)
+  set boundary shape = cube
+  
+  # Maximum value of x
+  set xmax = 1.0
+  
+  # Minimum value of x
+  set xmin = -1.0
+  
+  # Maximum value of y
+  set ymax = 1.0
+  
+  # Minimum value of y
+  set ymin = -1.0
+  
+  # Maximum value of z
+  set zmax = 1.0
+  
+  # Minimum value of z
+  set zmin = -1.0
+  
+  # Radius of mesh (if applicable)
+  set radius = 0.5
+  
+  # Height of mesh (if applicable)
+  set height = 1.0
+
+end
+
+
+subsection Output Parameters
+
+  # Name of the output file (without extension)
+  set Output filename = unspecified
+  
+  # Output file extension
+  set Output filetype = vtk
+
+end
+
+
+subsection Material Parameters
+
+  # Angular frequency
+  set omega = 1.0
+  
+  # Regularisation Parameter
+  set regularisation parameter = 1e-4
+
+  # Background permittivity
+  set background epsilon = 0.0
+
+  # Background (relative) permeability
+  set background mur = 1.0
+
+  # Background conductivity
+  set background sigma = 0.0
+
+  # Object permittivity
+  set object epsilon = 0.0
+
+  # Object (relative) permability
+  set object mur = 1.0
+
+  # Object conductivity
+  set object sigma = 0.0
+
+end
+
+
+subsection Excitation Coil Data
+
+  # Number of excitation coils in the array
+  set number of coils = 1
+  
+  # Centre of the excitation coil array
+  set array centre = 0.0, 0.0, 0.0
+  
+  # Radius of the excitation coil array
+  set array radius = 0.145
+  
+  # Angle (in degrees) to the position of the first excitation coil
+  set array start angle = 0.0
+  
+  # Radius of an individual excitation coil
+  set coil radius = 0.025
+  
+end
+
+subsection Sensor Coil Data
+
+  # Number of sensor coils
+  set number of coils = 16
+  
+  # Centre of the sensor coil array
+  set array centre = 0.0, 0.0, 0.0
+  
+  # Radius of the sensor coil array
+  set array radius = 0.135
+  
+  # Angle (in degrees) to the position of the first sensor coil
+  set array start angle = 0.0
+  
+  # Radius of an individual sensor coil
+  set coil radius = 0.025
+  
+end
+
+subsection Preconditioner Data
+
+  # Enable the sparse direct solver (disables the GMRES solver)
+  set use direct = true
+
+  # SparseILU diagonal strengthening
+  set diagonal strengthening = 0
+  
+  # SparseILU extra off diagonals
+  set extra off diagonals = 0
+
+end
+
+subsection Polarization Tensor
+
+  # Real part of Polarization Tensor
+  set Polarization Tensor Real =   -1.6333266779792159E-012,   3.5124564236742846E-016,   5.1468199725733006E-016;   3.5139218251699327E-016,  -1.6391253073139679E-012,   3.1536434568737249E-016;   5.1472006153172767E-016,   3.1539209605631369E-016,  -1.6353275942954698E-012;
+
+  # Imaginary part of Polarization Tensor
+  set Polarization Tensor Imaginary =   -1.4111165704125280E-009,  -1.8778137389453450E-013,  -1.7633652653192151E-017;  -1.8777994232179303E-013,  -1.4111165373466284E-009,  -1.0393514942434897E-017;  -1.7647397195041129E-017,  -1.0417010533458880E-017,  -1.4099455470855301E-009
+  
+
+end
