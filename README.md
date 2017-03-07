@@ -33,7 +33,7 @@ Work derived from this software:
 --------
 In addition to the terms of the GPL v3 license (see below), we kindly ask that any work using or derived from this code cites the following papers:
 
-[1] R.M. Kynch, P.D. Ledger. Resolving the sign conflict problem for hp hexahedral edge elements with applications to eddy current problems, submitted 2015.
+[1] R.M. Kynch, P.D. Ledger. Resolving the sign conflict problem for hp–hexahedral Nédélec elements with application to eddy current problems. Computers & Structures 181 (2017) 41-54. ISSN 0045-7949, http://dx.doi.org/10.1016/j.compstruc.2016.05.021
 
 [2] R.M. Kynch, P.D. Ledger. TBC
 
